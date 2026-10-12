@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#442113"><title>Pumpkin Magic Gift | Lina</title>
+<style>
+:root{color-scheme:dark;--gold:#ffe3a0}*{box-sizing:border-box}body{margin:0;background:#1b0c08;color:#fff6e9;font-family:'Yu Mincho','Hiragino Mincho ProN',Georgia,serif}main{min-height:100svh;display:flex;justify-content:center;background:radial-gradient(ellipse at center,#69361d,#1b0c08 75%)}.stage{position:relative;width:min(100%,540px);min-height:100svh;overflow:hidden;background:#4d2414 url('background.png') center center/cover no-repeat;isolation:isolate}.stage:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,10,4,.38),transparent 26%,transparent 52%,rgba(25,9,3,.55) 78%,rgba(18,7,4,.84));pointer-events:none}.content{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;align-items:center;padding:24px 20px max(25px,env(safe-area-inset-bottom));text-align:center}.eyebrow{font-size:11px;letter-spacing:.3em;color:var(--gold);text-shadow:0 2px 7px #30150b}h1{font-weight:500;font-size:clamp(25px,6vw,35px);margin:5px 0 3px;color:#fff4d9;text-shadow:0 2px 12px #3b1b09}.subtitle{font-size:12px;margin:0 0 6px;text-shadow:0 2px 7px #29100a}.balloon-space{position:relative;flex:1;min-height:220px;width:100%;display:grid;place-items:center}.balloon{width:min(77%,360px);max-height:42svh;object-fit:contain;filter:drop-shadow(0 10px 22px #2d0e08a0);transform-origin:50% 55%;animation:float 3.4s ease-in-out infinite;transition:opacity .16s}.balloon.inflate{animation:inflate 2.45s cubic-bezier(.35,.05,.65,.95) forwards}.balloon.pop{animation:pop .23s ease-out forwards}.panel{width:100%;max-width:430px;background:rgba(36,17,13,.83);border:1px solid rgba(255,221,160,.7);border-radius:18px;padding:16px;box-shadow:0 10px 30px #1d0a07a8;backdrop-filter:blur(8px)}.panel h2{font-size:17px;font-weight:500;margin:0 0 8px}.panel p{font-size:12px;line-height:1.75;margin:0 0 10px}textarea,input{width:100%;font:14px/1.6 sans-serif;color:#382014;background:#fff9ed;border:2px solid #edc88e;border-radius:9px;padding:10px;outline-offset:2px}textarea{min-height:83px;resize:vertical}input{margin-top:8px}.small{font-size:11px!important;color:#f4d9ba}.btn{display:block;width:100%;margin-top:10px;border:1px solid #fff0bd;border-radius:30px;background:linear-gradient(#ffca68,#ec8933);color:#47220d;padding:12px 16px;font-size:15px;font-weight:bold;cursor:pointer;box-shadow:0 4px 0 #99501c}.btn:disabled{opacity:.55;cursor:wait}.btn.secondary{background:rgba(55,29,19,.85);color:#fff0cc;box-shadow:none}.error{color:#ffcfba;font-size:12px;min-height:1.4em}.result{display:none;position:absolute;inset:0;z-index:5;background:rgba(25,10,12,.92);padding:25px 20px;overflow-y:auto;text-align:center;align-items:center;justify-content:center;flex-direction:column}.result.visible{display:flex}.result h2{font-size:25px;color:#ffe6a6;font-weight:500;margin:0 0 8px}.result p{font-size:13px;line-height:1.8}.art{display:block;max-width:min(80%,360px);max-height:56svh;width:auto;height:auto;object-fit:contain;border:5px solid #fff5dd;box-shadow:0 8px 35px #000a;animation:reveal .7s ease-out both}.result .btn{max-width:350px}.confetti{position:absolute;inset:0;pointer-events:none;z-index:4;overflow:hidden}.spark{position:absolute;left:50%;top:43%;width:9px;height:9px;background:#ffd979;border-radius:2px;box-shadow:0 0 12px #ffdd82;animation:scatter .95s ease-out forwards;transform:translate(-50%,-50%)}.demo{position:absolute;z-index:3;top:8px;right:8px;font:10px sans-serif;background:#5c2819df;border:1px solid #e2b96d;padding:5px 7px;border-radius:5px}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}@keyframes inflate{0%{transform:translateY(0) scale(1)}100%{transform:translateY(-7px) scale(1.46)}}@keyframes pop{0%{transform:scale(1.46);opacity:1}100%{transform:scale(1.85);opacity:0}}@keyframes reveal{from{opacity:0;transform:scale(.65) rotate(-5deg)}to{opacity:1;transform:scale(1) rotate(0)}}@keyframes scatter{from{opacity:1;transform:translate(-50%,-50%) rotate(0)}to{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r))}}@media(min-width:700px){.stage{box-shadow:0 0 55px #0009}.content{padding-top:36px}}@media(prefers-reduced-motion:reduce){.balloon{animation:none}.balloon.inflate{animation:inflate .15s forwards}.balloon.pop{animation:pop .1s forwards}.spark{animation-duration:.15s}}
+</style></head><body><main><div class="stage"><div class="demo" id="demoBadge">試作版・感想は送信されません</div><div class="content"><div class="eyebrow">LINA'S HALLOWEEN</div><h1>🎃 Pumpkin Magic Gift</h1><p class="subtitle">あなたの言葉が、魔法の贈り物に… ✨</p><div class="balloon-space"><img class="balloon" id="balloon" src="balloon.png" alt="ジャックオランタンの風船"></div><form class="panel" id="feedbackForm"><h2>心に残った感想を教えてね ♡</h2><p>作品のこと、ハロウィンの館のこと。どんな感想でも大歓迎！<br>メッセージのあとに、風船の魔法が始まります。</p><textarea id="message" maxlength="1000" minlength="2" required placeholder="感想をここに書いてね…" aria-label="感想"></textarea><input id="name" maxlength="40" placeholder="お名前（任意・匿名OK）" aria-label="お名前（任意）"><button class="btn" id="submitBtn" type="submit">🪄 魔法を届ける</button><div class="error" id="error" role="status" aria-live="polite"></div><p class="small" id="modeNotice">※試作版です。入力した感想は送信・保存されません。</p></form></div><div class="confetti" id="confetti"></div><section class="result" id="result" aria-live="polite"><h2>🎁 魔法の贈り物</h2><p>あなたへのハロウィンプレゼントです♡</p><img id="art" class="art" alt="プレゼントのアート"><a id="save" class="btn" download="Lina_Halloween_Gift.png" href="#">✨ アートを保存する</a><button id="again" class="btn secondary" type="button">お部屋にもどる</button><p class="small">Linaからの贈り物。個人で楽しんでね♡<br>無断転載・再配布・商用利用はご遠慮ください。</p></section></div></main><script>
+// 【本番設定】感想を保存できるGoogle Apps Script等のHTTPS URLを設定してください。
+// 空欄の間はデモモードです。デモ中の感想は外部送信されません。
+const FEEDBACK_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxidl4-1EDxqzFPTQA6LV3HcuTyq-u_lAuf-MPPYwKVvMs1QczdWskO8gCYW5tIA-mn2w/exec';
+// Google Apps Script に非表示フォームで送信し、保存結果の通知を待ちます。
+const GIFTS = ['gift1.png','gift2.png','gift3.png','gift4.png','gift5.png','gift6.png'];
+const form=document.getElementById('feedbackForm'),balloon=document.getElementById('balloon'),result=document.getElementById('result'),submitBtn=document.getElementById('submitBtn'),error=document.getElementById('error');
+if(FEEDBACK_ENDPOINT){document.getElementById('demoBadge').remove();document.getElementById('modeNotice').textContent='※感想はLinaが確認します。お名前は任意です。';}
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+function burst(){const layer=document.getElementById('confetti');layer.replaceChildren();for(let i=0;i<54;i++){const s=document.createElement('i');s.className='spark';const angle=Math.random()*Math.PI*2,dist=85+Math.random()*290;s.style.setProperty('--x',Math.cos(angle)*dist+'px');s.style.setProperty('--y',Math.sin(angle)*dist+'px');s.style.setProperty('--r',(Math.random()*720-360)+'deg');s.style.background=['#ffe49a','#ff9c4b','#ffcfec','#fff'][i%4];layer.append(s);}setTimeout(()=>layer.replaceChildren(),1300)}
+async function play(){balloon.classList.remove('inflate','pop');void balloon.offsetWidth;balloon.classList.add('inflate');await delay(2450);balloon.classList.remove('inflate');balloon.classList.add('pop');burst();await delay(350);const gift=GIFTS[Math.floor(Math.random()*GIFTS.length)];document.getElementById('art').src=gift;const save=document.getElementById('save');save.href=gift;save.download='Lina_Halloween_'+gift;result.classList.add('visible');}
+// POST は隠し iframe へ送る。成功判定は JSONP の GET で記録済みIDを確認する。
+// 同じIDの再送信は Apps Script 側で重複登録しない。
+let pendingNonce = null;
+function checkSaved(nonce){
+ return new Promise((resolve,reject)=>{
+  const callback='pumpkinCheck_'+Date.now()+'_'+Math.floor(Math.random()*100000);
+  const script=document.createElement('script');let done=false;
+  const timer=setTimeout(()=>finish(false,new Error('確認タイムアウト')),6500);
+  function finish(ok,val){if(done)return;done=true;clearTimeout(timer);delete window[callback];script.remove();ok?resolve(val):reject(val)}
+  window[callback]=(data)=>finish(true,Boolean(data&&data.saved));
+  script.onerror=()=>finish(false,new Error('確認通信エラー'));
+  script.src=FEEDBACK_ENDPOINT+'?action=check&nonce='+encodeURIComponent(nonce)+'&callback='+callback+'&t='+Date.now();
+  document.head.appendChild(script);
+ });
+}
+async function saveFeedback(message,name){
+ const nonce=pendingNonce || (pendingNonce=Date.now()+'_'+Math.random().toString(36).slice(2));
+ // 前回の送信が保存済みなら再送信せず演出へ
+ try{if(await checkSaved(nonce)){pendingNonce=null;return}}catch(e){}
+ const frame=document.createElement('iframe');frame.name='pumpkinSubmit_'+Date.now();frame.style.display='none';
+ frame.title='感想送信';document.body.appendChild(frame);
+ const post=document.createElement('form');post.method='POST';post.action=FEEDBACK_ENDPOINT;post.target=frame.name;post.style.display='none';
+ for(const [key,value] of Object.entries({message,name,nonce})){
+  const inp=document.createElement('input');inp.type='hidden';inp.name=key;inp.value=value;post.appendChild(inp);
+ }
+ document.body.appendChild(post);post.submit();post.remove();
+ try{
+  for(let i=0;i<15;i++){
+   await delay(1200);
+   try{if(await checkSaved(nonce)){pendingNonce=null;return}}catch(e){}
+  }
+  throw new Error('保存確認できませんでした');
+ }finally{setTimeout(()=>frame.remove(),500)}
+}
+form.addEventListener('submit',async e=>{
+ e.preventDefault();if(!form.reportValidity())return;
+ const message=document.getElementById('message').value.trim(),name=document.getElementById('name').value.trim();
+ if(message.length<2){error.textContent='感想を2文字以上入力してね。';return;}
+ submitBtn.disabled=true;error.textContent='';submitBtn.textContent='✨ 感想を届けています…';
+ try{await saveFeedback(message,name);submitBtn.textContent='✨ 魔法の準備中…';await play();}
+ catch(err){error.textContent='保存確認ができませんでした。少し待ってからもう一度押してね（重複保存は防ぎます）。';}
+ finally{submitBtn.disabled=false;submitBtn.textContent='🪄 魔法を届ける';}
+});
+document.getElementById('again').addEventListener('click',()=>{result.classList.remove('visible');balloon.classList.remove('inflate','pop');form.reset();window.scrollTo({top:0,behavior:'smooth'});});
+</script></body></html>
